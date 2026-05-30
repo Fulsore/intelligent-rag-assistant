@@ -34,17 +34,3 @@ A Retrieval-Augmented Generation (RAG) chatbot that allows users to upload docum
 
 ## Architecture
 
-[Architecture Diagram]
-
-## Screenshots
-
-[Screenshot 1]
-[Screenshot 2]
-
-## Demo Video
-
-[YouTube Link]
-
-## Installation
-
-...
