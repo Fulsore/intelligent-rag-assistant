@@ -33,4 +33,8 @@ A Retrieval-Augmented Generation (RAG) chatbot that allows users to upload docum
 - ChromaDB / FAISS
 
 ## Architecture
+https://github.com/Fulsore/intelligent-rag-assistant/blob/main/intel_rag.drawio.png
+
+## Demo Video
+https://github.com/Fulsore/intelligent-rag-assistant/blob/main/INT_RAG%20DEMO.mp4
 
