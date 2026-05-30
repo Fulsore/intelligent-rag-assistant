@@ -1,0 +1,73 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="9IE5go_DiJnaBj0Z-PfD">
+    <mxGraphModel dx="2943" dy="1606" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="frontend" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Frontend Application&#xa;(React.js / Next.js)" vertex="1">
+          <mxGeometry height="80" width="220" x="600" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="api" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Django REST Framework API&#xa;/chat&#xa;/upload-document" vertex="1">
+          <mxGeometry height="100" width="220" x="600" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="rag" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="RAG Service Layer&#xa;LangChain Pipeline" vertex="1">
+          <mxGeometry height="80" width="220" x="600" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="vector" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Vector Database&#xa;ChromaDB / FAISS" vertex="1">
+          <mxGeometry height="90" width="220" x="320" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="llm" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="LLM Provider&#xa;Groq / OpenRouter / OpenAI" vertex="1">
+          <mxGeometry height="90" width="240" x="880" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="response" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Context Retrieval +&#xa;Response Generation" vertex="1">
+          <mxGeometry height="90" width="220" x="600" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="upload" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="PDF / DOCX / TXT Upload" vertex="1">
+          <mxGeometry height="80" width="220" x="40" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="loader" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Document Loader" vertex="1">
+          <mxGeometry height="80" width="220" x="40" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="chunk" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Text Chunking" vertex="1">
+          <mxGeometry height="80" width="220" x="40" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="embed" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Embedding Model" vertex="1">
+          <mxGeometry height="80" width="220" x="40" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="frontend" target="api">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="api" target="rag">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="rag" target="vector">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="rag" target="llm">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="vector" target="response">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="llm" target="response">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="response" target="api">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="upload" target="loader">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="loader" target="chunk">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="chunk" target="embed">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="embed" target="vector">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
