@@ -1,45 +1,45 @@
-from langchain_huggingface import HuggingFaceEmbeddings
+# from langchain_huggingface import HuggingFaceEmbeddings
 
-from langchain_community.vectorstores import FAISS
+# from langchain_community.vectorstores import FAISS
 
-from rag.pipeline.llm import query_llm
-
-
-embedding_model = HuggingFaceEmbeddings(
-    model_name="sentence-transformers/all-MiniLM-L6-v2"
-)
-
-db = FAISS.load_local(
-    "rag/vectorstore",
-    embedding_model,
-    allow_dangerous_deserialization=True
-)
+# from rag.pipeline.llm import query_llm
 
 
-def chatbot(question):
+# embedding_model = HuggingFaceEmbeddings(
+#     model_name="sentence-transformers/all-MiniLM-L6-v2"
+# )
 
-    results = db.similarity_search(
-        question,
-        k=3
-    )
+# db = FAISS.load_local(
+#     "rag/vectorstore",
+#     embedding_model,
+#     allow_dangerous_deserialization=True
+# )
 
-    context = "\n".join([
-        result.page_content
-        for result in results
-    ])
 
-    prompt = f"""
-    You are a hyperlocal commerce assistant.
+# def chatbot(question):
 
-    Answer ONLY from provided context.
+#     results = db.similarity_search(
+#         question,
+#         k=3
+#     )
 
-    Context:
-    {context}
+#     context = "\n".join([
+#         result.page_content
+#         for result in results
+#     ])
 
-    Question:
-    {question}
-    """
+#     prompt = f"""
+#     You are a hyperlocal commerce assistant.
 
-    answer = context
+#     Answer ONLY from provided context.
 
-    return answer
+#     Context:
+#     {context}
+
+#     Question:
+#     {question}
+#     """
+
+#     answer = context
+
+#     return answer

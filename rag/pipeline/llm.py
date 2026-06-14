@@ -1,27 +1,27 @@
-import requests
+# import requests
 
-from decouple import config
-
-
-HF_API_KEY = config("HF_API_KEY")
-
-API_URL = "https://api-inference.huggingface.co/models/google/flan-t5-base"
-
-headers = {
-    "Authorization": f"Bearer {HF_API_KEY}"
-}
+# from decouple import config
 
 
-def query_llm(prompt):
+# HF_API_KEY = config("HF_API_KEY")
 
-    payload = {
-        "inputs": prompt
-    }
+# API_URL = "https://api-inference.huggingface.co/models/google/flan-t5-base"
 
-    response = requests.post(
-        API_URL,
-        headers=headers,
-        json=payload
-    )
+# headers = {
+#     "Authorization": f"Bearer {HF_API_KEY}"
+# }
 
-    return response.json()
+
+# def query_llm(prompt):
+
+#     payload = {
+#         "inputs": prompt
+#     }
+
+#     response = requests.post(
+#         API_URL,
+#         headers=headers,
+#         json=payload
+#     )
+
+#     return response.json()

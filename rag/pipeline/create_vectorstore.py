@@ -1,58 +1,58 @@
-import pandas as pd
+# import pandas as pd
 
-from langchain_text_splitters import RecursiveCharacterTextSplitter
+# from langchain_text_splitters import RecursiveCharacterTextSplitter
 
-from langchain_huggingface import HuggingFaceEmbeddings
+# from langchain_huggingface import HuggingFaceEmbeddings
 
-from langchain_community.vectorstores import FAISS
+# from langchain_community.vectorstores import FAISS
 
-from langchain_core.documents import Document
-
-
-print("Loading cleaned data...")
-
-df = pd.read_csv(
-    "rag/cleaned_data/final_cleaned_data.csv"
-)
-
-documents = []
-
-for text in df['text']:
-
-    documents.append(
-        Document(page_content=text)
-    )
-
-print(f"Loaded {len(documents)} documents")
+# from langchain_core.documents import Document
 
 
-print("Splitting documents...")
+# print("Loading cleaned data...")
 
-splitter = RecursiveCharacterTextSplitter(
-    chunk_size=500,
-    chunk_overlap=50
-)
+# df = pd.read_csv(
+#     "rag/cleaned_data/final_cleaned_data.csv"
+# )
 
-chunks = splitter.split_documents(documents)
+# documents = []
 
-print(f"Created {len(chunks)} chunks")
+# for text in df['text']:
+
+#     documents.append(
+#         Document(page_content=text)
+#     )
+
+# print(f"Loaded {len(documents)} documents")
 
 
-print("Loading embedding model...")
+# print("Splitting documents...")
 
-embedding_model = HuggingFaceEmbeddings(
-    model_name="sentence-transformers/all-MiniLM-L6-v2"
-)
+# splitter = RecursiveCharacterTextSplitter(
+#     chunk_size=500,
+#     chunk_overlap=50
+# )
 
-print("Creating vector database...")
+# chunks = splitter.split_documents(documents)
 
-vectorstore = FAISS.from_documents(
-    chunks,
-    embedding_model
-)
+# print(f"Created {len(chunks)} chunks")
 
-vectorstore.save_local(
-    "rag/vectorstore"
-)
 
-print("FAISS vector database created")
+# print("Loading embedding model...")
+
+# embedding_model = HuggingFaceEmbeddings(
+#     model_name="sentence-transformers/all-MiniLM-L6-v2"
+# )
+
+# print("Creating vector database...")
+
+# vectorstore = FAISS.from_documents(
+#     chunks,
+#     embedding_model
+# )
+
+# vectorstore.save_local(
+#     "rag/vectorstore"
+# )
+
+# print("FAISS vector database created")

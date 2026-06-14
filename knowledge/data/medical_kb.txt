@@ -1,0 +1,53 @@
+DIABETES MELLITUS
+
+Definition:
+Diabetes is a chronic metabolic disorder characterized by high blood glucose levels.
+
+Symptoms:
+- Frequent urination
+- Excessive thirst
+- Fatigue
+
+Causes:
+- Insulin resistance
+- Pancreatic dysfunction
+
+Treatment:
+- Insulin therapy
+- Metformin
+- Diet control
+
+
+HYPERTENSION
+
+Definition:
+Hypertension is a condition of persistently elevated blood pressure.
+
+Symptoms:
+- Headache
+- Dizziness
+- Blurred vision
+
+Causes:
+- Obesity
+- Stress
+- High salt intake
+
+Treatment:
+- ACE inhibitors
+- Lifestyle modification
+
+
+MALARIA
+
+Definition:
+Malaria is a mosquito-borne infectious disease caused by Plasmodium parasites.
+
+Symptoms:
+- Fever
+- Chills
+- Sweating
+
+Treatment:
+- Chloroquine
+- Artemisinin-based therapy

@@ -1,36 +1,36 @@
-import pandas as pd
+# import pandas as pd
 
-df = pd.read_csv(
-    "rag/datasets/customer_support.csv"
-)
+# df = pd.read_csv(
+#     "rag/datasets/customer_support.csv"
+# )
 
-print(df.columns)
+# print(df.columns)
 
-df = df.drop_duplicates()
+# df = df.drop_duplicates()
 
-df = df.dropna()
+# df = df.dropna()
 
-documents = []
+# documents = []
 
-for row in df.to_dict(orient="records"):
+# for row in df.to_dict(orient="records"):
 
-    text = ""
+#     text = ""
 
-    for key, value in row.items():
+#     for key, value in row.items():
 
-        text += f"{key}: {value}\n"
+#         text += f"{key}: {value}\n"
 
-    documents.append(text)
+#     documents.append(text)
 
-clean_df = pd.DataFrame({
-    "text": documents
-})
+# clean_df = pd.DataFrame({
+#     "text": documents
+# })
 
-clean_df.to_csv(
-    "rag/cleaned_data/final_cleaned_data.csv",
-    index=False
-)
+# clean_df.to_csv(
+#     "rag/cleaned_data/final_cleaned_data.csv",
+#     index=False
+# )
 
-print(clean_df.head())
+# print(clean_df.head())
 
-print("Cleaning completed")
+# print("Cleaning completed")
